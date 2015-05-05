@@ -1,0 +1,64 @@
+<section data-ng-controller="HomeController">
+
+	<div class="row">
+		<h2 class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+			Fill in the form to get in touch with us
+		</h2>
+
+		<hr class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2"/>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+			<form name="contact" novalidate>
+
+				<div class="form-group">
+					<div data-ng-show="error" class="alert alert-danger">
+						<p>{{error}}</p>
+					</div>
+
+					<div data-ng-show="success" class="alert alert-success">
+						<p>{{success}}</p>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name">Name</label>
+    			<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" data-ng-model="data.name" required>
+    			<div ng-show="contact.$submitted || contact.name.$touched">
+			      <div ng-show="contact.name.$error.required" class="text-danger">Please fill in your name.</div>
+			    </div>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email Address</label>
+    			<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" data-ng-model="data.email" required>
+    			<div ng-show="contact.$submitted || contact.email.$touched">
+			      <div ng-show="contact.email.$error.required" class="text-danger">Please fill in your email.</div>
+			    </div>
+				</div>
+
+				<div class="form-group">
+					<label for="subject">Subject</label>
+    			<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" data-ng-model="data.subject" required>
+    			<div ng-show="contact.$submitted || contact.subject.$touched">
+			      <div ng-show="contact.subject.$error.required" class="text-danger">Please fill in a subject.</div>
+			    </div>
+				</div>
+
+				<div class="form-group">
+					<label for="body">Your Message</label>
+    			<textarea required class="form-control" id="body" name="body" placeholder="Write your Message" maxlength="1000" rows="5"  data-ng-model="data.body"></textarea>
+    			<div ng-show="contact.$submitted || contact.body.$touched">
+			      <div ng-show="contact.body.$error.required" class="text-danger">Please fill in a message.</div>
+			    </div>
+				</div>
+
+				<button type="submit" class="btn btn-default" ng-click="submitForm(data)">{{submit}}</button>
+			</form>
+		</div>
+	</div>
+	
+	<br><hr/>
+	<br>Luma Team.
+</section>

@@ -1,0 +1,26 @@
+{% extends 'layout.server.view.html' %}
+
+{% block content %}
+	<section class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+		<h1>List of contact requests received</h1>
+		<hr>
+		<ul class="list-unstyled">
+			{% for item in data %}
+				<li>
+					<dl class="dl-horizontal">
+						<dt>Subject</dt>
+						<dd>{{item.subject}}</dd>
+						<dt>Sender</dt>
+						<dd>{{item.name}} (<a href="mailto:{{item.email}}">{{item.email}}</a>)</dd>
+						<dt>Message</dt>
+						<dd>{{item.body}}</dd>
+						<dt>Sent on</dt>
+						<dd>{{item.created.toString()}}</dd>
+					</dl>
+					
+					<hr/>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+{% endblock %}
