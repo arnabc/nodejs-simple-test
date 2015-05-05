@@ -16,11 +16,10 @@ Fork this repo, and when done issue a pull request for review.
 # Installation
 Before running the application, install the following global dependencies:
 
-``` npm install -g bower ```
-``` npm install -g grunt-cli ```
-``` npm install -g yo ```
-
-- You need to have Mongo running on the local system
+- ``` npm install -g bower ```
+- ``` npm install -g grunt-cli ```
+- ``` npm install -g yo ```
+- You need to have Mongo running on the local system (the host can be configured in `config/development.js`)
 
 ## Implementation detail
 
@@ -29,6 +28,5 @@ Before running the application, install the following global dependencies:
 - Uses angular in the frontend
 - Allows email notification to a pre-configured email address when new contact requests are made
 - Has mocha test cases for Model save operation
-
 - The admin email for notification can be configured in `config/development.js`
 - [http://localhost:300/contact_requests](http://localhost:300/contact_requests) will display the list of contact requests made.
