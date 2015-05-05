@@ -29,4 +29,4 @@ Before running the application, install the following global dependencies:
 - Allows email notification to a pre-configured email address when new contact requests are made
 - Has mocha test cases for Model save operation
 - The admin email for notification can be configured in `config/development.js`
-- [http://localhost:300/contact_requests](http://localhost:300/contact_requests) will display the list of contact requests made.
+- [http://localhost:3000/contact_requests](http://localhost:3000/contact_requests) will display the list of contact requests made.
