@@ -8,7 +8,7 @@ module.exports = {
 
     mailer: {
         from: process.env.MAILER_FROM || 'default-user@mailinator.com',
-        to: process.env.MAILER_TO || 'changador@mailinator.com',
+        to: process.env.MAILER_TO || 'lumadmin_default_promobi@mailinator.com',
         options: {
             service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
             auth: {
